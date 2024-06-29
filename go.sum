@@ -1,0 +1,4 @@
+github.com/jacobsa/fuse v0.0.0-20240626143436-8a36813dc074 h1:rrmTkL654m7vQTYzi9NpEzAO7t0to5f1/jgkvSorVs8=
+github.com/jacobsa/fuse v0.0.0-20240626143436-8a36813dc074/go.mod h1:JYi9iIxdYNgxmMgLwtSHO/hmVnP2kfX1oc+mtx+XWLA=
+golang.org/x/sys v0.18.0 h1:DBdB3niSjOA/O0blCZBqDefyWNYveAYMNF1Wum0DYQ4=
+golang.org/x/sys v0.18.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
