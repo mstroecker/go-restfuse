@@ -1,4 +1,4 @@
-module github.com/mstroecker/go-rest-to-fuse
+module github.com/mstroecker/go-restfuse
 
 go 1.22.4
 

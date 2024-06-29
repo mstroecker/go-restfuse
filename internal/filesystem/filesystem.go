@@ -35,7 +35,7 @@ func (fs *FS) StatFS(ctx context.Context, op *fuseops.StatFSOp) error {
 
 func (fs *FS) GetInodeAttributes(ctx context.Context, op *fuseops.GetInodeAttributesOp) error {
 	log.Printf("GetInodeAttributes")
-  info, err := fs.Source.GetChildInfo(uint64(op.Inode), "")
+	info, err := fs.Source.GetChildInfo(uint64(op.Inode), "")
 	if err != nil {
 		log.Printf("GetInodeAttributes ERROR")
 		return err
@@ -61,13 +61,13 @@ func (fs *FS) LookUpInode(ctx context.Context, op *fuseops.LookUpInodeOp) error 
 
 func (fs *FS) OpenDir(ctx context.Context, op *fuseops.OpenDirOp) error {
 	log.Printf("OpenDir")
-  _, err := fs.Source.ListDirectory(uint64(op.Inode))
+	_, err := fs.Source.ListDirectory(uint64(op.Inode))
 	return err
 }
 
 func (fs *FS) ReadDir(ctx context.Context, op *fuseops.ReadDirOp) error {
 	log.Printf("ReadDir")
-  entries, err := fs.Source.ListDirectory(uint64(op.Inode))
+	entries, err := fs.Source.ListDirectory(uint64(op.Inode))
 	if err != nil {
 		return err
 	}
@@ -181,7 +181,7 @@ func Start(mountPoint string, dataProvider DataProvider) {
 
 type DataProvider interface {
 	GetPathForInode(inode uint64) string
-  GetChildInfo(parentInode uint64, childName string) (FileInfo, error)
+	GetChildInfo(parentInode uint64, childName string) (FileInfo, error)
 	GetFileContent(inode uint64) ([]byte, error)
-  ListDirectory(inode uint64) ([]FileInfo, error)
+	ListDirectory(inode uint64) ([]FileInfo, error)
 }
